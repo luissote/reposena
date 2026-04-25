@@ -1,0 +1,39 @@
+public class BusquedaBinaria {
+    public static int buscar(int[] arreglo, int objetivo) {
+        int izquierda = 0;
+        int derecha = arreglo.length - 1;
+
+        while (izquierda <= derecha) {
+            int medio = izquierda + (derecha - izquierda) / 2;
+
+           
+            if (arreglo[medio] == objetivo) {
+                return medio;
+            }
+
+            
+            if (arreglo[medio] < objetivo) {
+                izquierda = medio + 1;
+            } 
+           
+            else {
+                derecha = medio - 1;
+            }
+        }
+
+      
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        int[] datos = {10, 20, 30, 40, 50, 60}; 
+        int objetivo = 40;
+        int resultado = buscar(datos, objetivo);
+
+        if (resultado != -1) {
+            System.out.println("Elemento encontrado en el índice: " + resultado);
+        } else {
+            System.out.println("Elemento no encontrado.");
+        }
+    }
+}
