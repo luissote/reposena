@@ -6,7 +6,7 @@ public class BusquedaBinaria {
         while (izquierda <= derecha) {
             int medio = izquierda + (derecha - izquierda) / 2;
 
-            // Verificar si el objetivo está en el medio
+          
             if (arreglo[medio] == objetivo) {
                 return medio;
             }
@@ -15,7 +15,7 @@ public class BusquedaBinaria {
             if (arreglo[medio] < objetivo) {
                 izquierda = medio + 1;
             } 
-           // Si el objetivo es menor, ignorar mitad derecha
+        
             else {
                 derecha = medio - 1;
             }
@@ -26,7 +26,7 @@ public class BusquedaBinaria {
     }
 
     public static void main(String[] args) {
-        int[] datos = {10, 20, 30, 40, 50, 60}; // El arreglo debe estar ordenado para que la búsqueda binaria funcione correctamente
+        int[] datos = {10, 20, 30, 40, 50, 60}; 
         int objetivo = 40;
         int resultado = buscar(datos, objetivo);
 
