@@ -15,7 +15,7 @@ public class BusquedaBinaria {
             if (arreglo[medio] < objetivo) {
                 izquierda = medio + 1;
             } 
-           
+           // si el objetivo es menor, ignorar la mitad derecha
             else {
                 derecha = medio - 1;
             }
