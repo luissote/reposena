@@ -6,12 +6,12 @@ public class BusquedaBinaria {
         while (izquierda <= derecha) {
             int medio = izquierda + (derecha - izquierda) / 2;
 
-           
+           // verificar si el objetivo esta en el medio
             if (arreglo[medio] == objetivo) {
                 return medio;
             }
 
-            
+            // si el objetivo es menor, ignorar la mitad izquierda
             if (arreglo[medio] < objetivo) {
                 izquierda = medio + 1;
             } 
